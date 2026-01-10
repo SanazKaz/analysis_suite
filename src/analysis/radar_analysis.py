@@ -348,7 +348,7 @@ def plot_radar_overlay(
     angles = [n / float(N) * 2 * pi for n in range(N)]
     angles += angles[:1]
     
-    fig, ax = plt.subplots(figsize=(8, 8), subplot_kw={'polar': True})
+    fig, ax = plt.subplots(figsize=(12, 8), subplot_kw={'polar': True})
     
     # Refined colors for overlay - expanded for multiple PRISM variants
     colors = {
@@ -403,9 +403,9 @@ def plot_radar_overlay(
     ax.yaxis.grid(True, color='grey', linewidth=1, alpha=0.8)
     
     ax.set_title(title, size=14, y=1.08, fontweight='bold')
-    ax.legend(loc='upper left', bbox_to_anchor=(-0.3, 1.0), frameon=True)
+    ax.legend(loc='center left', bbox_to_anchor=(1.15, 0.5), frameon=True, fontsize=9)
     
-    plt.tight_layout()
+    plt.tight_layout(rect=[0, 0, 0.85, 1])  # Leave room for legend on right
     save_figure(fig, output_path, formats=figure_formats, dpi=dpi)
     plt.close()
 

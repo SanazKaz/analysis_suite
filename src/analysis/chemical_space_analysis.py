@@ -251,7 +251,7 @@ def plot_chemical_space(
     """
     set_pub_style()
     
-    fig, ax = plt.subplots(figsize=(10, 8))
+    fig, ax = plt.subplots(figsize=(14, 10))
     
     # Color and style settings - expanded for multiple PRISM variants
     style_config = {
@@ -291,9 +291,10 @@ def plot_chemical_space(
     ax.set_ylabel('t-SNE 2')
     ax.set_title(f'Chemical Space: {dataset_name}\n(PCA explained variance: {explained_var:.1f}%)')
     
-    # Legend
+    # Legend - positioned outside on right
     legend = ax.legend(
-        loc='upper right',
+        loc='center left',
+        bbox_to_anchor=(1.02, 0.5),
         frameon=True,
         fancybox=True,
         framealpha=0.9,
@@ -306,7 +307,7 @@ def plot_chemical_space(
     for spine in ax.spines.values():
         spine.set_visible(False)
     
-    plt.tight_layout()
+    plt.tight_layout(rect=[0, 0, 0.82, 1])  # Leave room for legend on right
     save_figure(fig, output_path, formats=formats, dpi=dpi)
     plt.close(fig)
 
