@@ -1,0 +1,29 @@
+output_dir: ./results/curriculum_comparison
+
+datasets:
+  - name: PB_Aromatic_Curriculum
+    reference: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/PB_Aromatic_bonus_feature_scan_curriculum/last_epoch_no_curriculum.sdf
+    methods:
+      Best Epoch: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/PB_Aromatic_bonus_feature_scan_curriculum/no_curriculum_epoch_81.sdf
+      DiffSBDD: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/diffsbdd_1pi4.sdf
+
+analyses:
+  - posebusters
+  - rings
+  - radar
+  - molecular_props
+  - vina
+  - feature_rewards
+
+feature_rewards:
+  hotspot_pkl: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/ampc_hotspot_global_centered_eps0.5_min10_aromatic5.pkl
+
+vina:
+  protein: /Users/sanazkazeminia/Documents/analysis_suite/data/data/AMPC_beta_lactamase/01_raw_pdbs/custom_list_data/1pi4.pdb
+  # center: [x, y, z]  # Optional: if not set, uses ligand positions
+  box_size: [25, 25, 25]
+
+plotting:
+  figure_format: [png, svg]
+  dpi: 300
+

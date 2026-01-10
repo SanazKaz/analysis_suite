@@ -1,0 +1,47 @@
+output_dir: ./results
+
+datasets:
+  - name: AMPC_beta_lactamase
+    reference: /path/to/ampc/reference_ligands/
+    methods:
+      PRISM: /path/to/prism/ampc/generated_molecules/
+      DiffSBDD: /path/to/diffsbdd/ampc/molecules/
+
+  - name: Carbonic_Anhydrase_II
+    reference: /path/to/ca2/reference_ligands/
+    methods:
+      PRISM: /path/to/prism/ca2/generated_molecules/
+      DiffSBDD: /path/to/diffsbdd/ca2/molecules/
+
+  - name: Dataset_3
+    reference: /path/to/dataset3/reference_ligands/
+    methods:
+      PRISM: /path/to/prism/dataset3/generated_molecules/
+      DiffSBDD: /path/to/diffsbdd/dataset3/molecules/
+
+  - name: Dataset_4
+    reference: /path/to/dataset4/reference_ligands/
+    methods:
+      PRISM: /path/to/prism/dataset4/generated_molecules/
+      DiffSBDD: /path/to/diffsbdd/dataset4/molecules/
+
+  - name: Dataset_5
+    reference: /path/to/dataset5/reference_ligands/
+    methods:
+      PRISM: /path/to/prism/dataset5/generated_molecules/
+      DiffSBDD: /path/to/diffsbdd/dataset5/molecules/
+
+  - name: Dataset_6
+    reference: /path/to/dataset6/reference_ligands/
+    methods:
+      PRISM: /path/to/prism/dataset6/generated_molecules/
+      DiffSBDD: /path/to/diffsbdd/dataset6/molecules/
+
+analyses:
+  - posebusters
+  - rings
+  - radar
+
+plotting:
+  figure_format: [png, svg]
+  dpi: 300

@@ -1,0 +1,44 @@
+# PoseBusters Comparison: PRISM vs DiffSBDD across targets
+# Compares the PoseBusters validity results per target between the two methods
+
+output_dir: ./results/Posebusters_Prism
+
+datasets:
+  - name: AMPC_beta_lactamase
+    reference: /Users/sanazkazeminia/Documents/analysis_suite/data/data/AMPC_beta_lactamase/02_preprocessed/sdf_files
+    methods:
+      DiffSBDD: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/crossdocked_fa_cond_temp_10k_Evaluation/AMPC_beta_lactamase/AMPC_beta_lactamase_processed.sdf
+      PRISM: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/Posebusters_Prism/AMPC_beta_lactamase/AMPC_beta_lactamase_processed.sdf
+
+  - name: Carb_Anh_II
+    reference: /Users/sanazkazeminia/Documents/analysis_suite/data/data/Carb_Anh_II/02_preprocessed/sdf_files
+    methods:
+      DiffSBDD: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/crossdocked_fa_cond_temp_10k_Evaluation/Carb_Anh_II/Carb_Anh_II_processed.sdf
+      PRISM: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/Posebusters_Prism/Carb_Anh_II/Carb_Anh_II_processed.sdf
+
+  - name: COVID19_main_protease
+    reference: /Users/sanazkazeminia/Documents/analysis_suite/data/data/covid19_main_protease/02_preprocessed/sdf_files
+    methods:
+      DiffSBDD: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/crossdocked_fa_cond_temp_10k_Evaluation/COVID19_main_protease/COVID19_main_protease_processed.sdf
+      PRISM: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/Posebusters_Prism/COVID19_main_protease/COVID19_main_protease_processed.sdf
+
+  - name: EGFR
+    reference: /Users/sanazkazeminia/Documents/analysis_suite/data/data/EGFR/02_preprocessed/sdf_files
+    methods:
+      DiffSBDD: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/crossdocked_fa_cond_temp_10k_Evaluation/EGFR/EGFR_processed.sdf
+      PRISM: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/Posebusters_Prism/EGFR/EGFR_processed.sdf
+
+  - name: Estrogen_recep_alpha
+    reference: /Users/sanazkazeminia/Documents/analysis_suite/data/data/Estrogen_recep_alpha/02_preprocessed/sdf_files
+    methods:
+      DiffSBDD: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/crossdocked_fa_cond_temp_10k_Evaluation/Estrogen_recep_alpha/Estrogen_recep_alpha_processed.sdf
+      PRISM: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/Posebusters_Prism/Estrogen_recep_alpha/Estrogen_recep_alpha_processed.sdf
+
+analyses:
+  - molecular_props
+  - tanimoto
+
+plotting:
+  figure_format: [png, svg]
+  dpi: 300
+

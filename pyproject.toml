@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prism-analysis"
+version = "0.1.0"
+description = "Molecular analysis pipeline for PRISM benchmarking"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Sanaz Kazeminia", email = "sanaz.kazeminia@wolfson.ox.ac.uk"}
+]
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy>=2.0.0",
+    "pandas>=2.0.0",
+    "matplotlib>=3.10.0",
+    "seaborn>=0.13.0",
+    "scipy>=1.15.0",
+    "scikit-learn>=1.7.0",
+    "rdkit>=2024.0.0",
+    "posebusters>=0.4.0",
+    "posecheck>=1.3.0",
+    "pyyaml>=6.0",
+    "statannotations>=0.7.0",
+    "biopython>=1.85",
+    "prolif>=2.0.0",
+    "datamol>=0.12.0",
+    "tqdm>=4.60.0",
+]
+
+keywords = ["cheminformatics", "drug-discovery", "molecular-generation", "benchmarking"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+prism-analyze = "src.cli:main"
+
+[project.urls]
+Repository = "https://github.com/yourusername/prism-analysis"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"

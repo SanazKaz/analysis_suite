@@ -1,0 +1,22 @@
+output_dir: ./results/feature_comparison
+
+datasets:
+  - name: AMPC_Feature_Comparison
+    reference: /Users/sanazkazeminia/Documents/mol_test_suite/data/project_data/data/AMPC_beta_lactamase/FEATURE_MAP_ALIGNED
+    methods:
+      Baseline (CrossDocked): /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/crossdocked_fa_cond_temp_10k_Evaluation/AMPC_beta_lactamase/AMPC_beta_lactamase_processed.sdf
+      Last Epoch: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/PB_Aromatic_bonus_feature_scan_curriculum/last_epoch_no_curriculum.sdf
+
+analyses:
+  - feature_rewards
+
+feature_rewards:
+  hotspot_pkl: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/ampc_hotspot_global_centered_eps0.5_min10_aromatic5.pkl
+
+plotting:
+  figure_format: [png, svg]
+  dpi: 300
+
+
+
+

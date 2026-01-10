@@ -1,0 +1,29 @@
+# Full AMPC Method Comparison
+# Compares all 6 PRISM variants plus DiffSBDD for AMPC beta-lactamase
+
+output_dir: ./results/ampc_full_comparison
+
+datasets:
+  - name: AMPC_beta_lactamase
+    reference: /Users/sanazkazeminia/Documents/analysis_suite/data/data/AMPC_beta_lactamase/02_preprocessed/sdf_files
+    methods:
+      PRISM 80-20 HBond Aromatic: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/80_20_PB_aro_bonus_hbond_aromatics_feature/AMPC_beta_lactamase/AMPC_beta_lactamase_processed.sdf
+      PRISM 50-50 HBond Aromatic: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/5050_hbdon_aromatics_dbscan_pb_aro_bonus/AMPC_beta_lactamase/AMPC_beta_lactamase_processed.sdf
+      DiffSBDD: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/DiffSBDD/AMPC_beta_lactamase/AMPC_beta_lactamase_processed.sdf
+      PRISM Aromatic Bonus Feature: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/PB_aro_bonus_AROMATIC_FEATURE/AMPC_beta_lactamase/AMPC_beta_lactamase_processed.sdf
+      PRISM Aromatic Bonus DBSCAN: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/PB_aro_bonus_DBSCAN/AMPC_beta_lactamase/AMPC_beta_lactamase_processed.sdf
+      PRISM PoseBusters: /Users/sanazkazeminia/Documents/analysis_suite/data/run_data/Posebusters_Prism/AMPC_beta_lactamase/AMPC_beta_lactamase_processed.sdf
+
+analyses:
+  - posebusters
+  - rings
+
+vina:
+  protein: /Users/sanazkazeminia/Documents/analysis_suite/data/data/AMPC_beta_lactamase/01_raw_pdbs/custom_list_data/1pi4.pdb
+  # center: [x, y, z]  # Optional - will use ligand center if not specified
+  box_size: [25, 25, 25]
+
+plotting:
+  figure_format: [png, svg]
+  dpi: 300
+
