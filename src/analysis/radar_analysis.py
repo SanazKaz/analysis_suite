@@ -268,7 +268,7 @@ def plot_radar_grid(
         'PRISM PoseBusters': '#26A69A',            # Teal
         'PRISM 80/20 HBond Aromatic': '#9B59B6',   # Purple
         'PRISM 50/50 HBond Aromatic': '#F39C12',   # Orange
-        'PRISM Aromatic Bonus Feature': '#1ABC9C', # Turquoise
+        'PRISM Aromatic Bonus Feature': '#E91E63', # Pink
         'PRISM Aromatic Bonus DBSCAN': '#E74C3C',  # Red
     }
     default_color = '#7E57C2'
@@ -358,7 +358,7 @@ def plot_radar_overlay(
         'PRISM PoseBusters': '#26A69A',            # Teal
         'PRISM 80/20 HBond Aromatic': '#9B59B6',   # Purple
         'PRISM 50/50 HBond Aromatic': '#F39C12',   # Orange
-        'PRISM Aromatic Bonus Feature': '#1ABC9C', # Turquoise
+        'PRISM Aromatic Bonus Feature': '#E91E63', # Pink
         'PRISM Aromatic Bonus DBSCAN': '#E74C3C',  # Red
     }
     default_colors = ['#7E57C2', '#EF5350', '#FFA726', '#66BB6A', '#AB47BC', '#29B6F6']
@@ -491,7 +491,7 @@ def process_dataset_radar(dataset, output_dir: Path, config) -> dict:
         'PRISM PoseBusters': '#26A69A',
         'PRISM 80/20 HBond Aromatic': '#9B59B6',
         'PRISM 50/50 HBond Aromatic': '#F39C12',
-        'PRISM Aromatic Bonus Feature': '#1ABC9C',
+        'PRISM Aromatic Bonus Feature': '#E91E63',
         'PRISM Aromatic Bonus DBSCAN': '#E74C3C',
     }
     for source, props in all_properties.items():

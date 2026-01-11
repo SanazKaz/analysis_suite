@@ -205,7 +205,7 @@ def plot_similarity_histograms(
         'DiffSBDD': '#E94F37',                 # Coral red
         'PRISM 80-20 HBond Aromatic': '#9B59B6',  # Purple
         'PRISM 50-50 HBond Aromatic': '#F39C12',  # Orange
-        'PRISM Aromatic Bonus Feature': '#1ABC9C', # Teal
+        'PRISM Aromatic Bonus Feature': '#E91E63', # Pink
         'PRISM Aromatic Bonus DBSCAN': '#E74C3C',  # Red
         'Reference': '#7D8491',                # Gray
     }

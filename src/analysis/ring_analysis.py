@@ -39,6 +39,18 @@ MOLECULAR_PROPERTIES = [
     ('n_heavy_atoms', 'Heavy Atoms'),
 ]
 
+# Consistent color palette for all methods
+METHOD_COLORS = {
+    'Reference': '#37474F',                    # Blue-grey
+    'DiffSBDD': '#5C6BC0',                     # Indigo
+    'PRISM': '#26A69A',                        # Teal
+    'PRISM PoseBusters': '#26A69A',            # Teal
+    'PRISM 80/20 HBond Aromatic': '#9B59B6',   # Purple
+    'PRISM 50/50 HBond Aromatic': '#F39C12',   # Orange
+    'PRISM Aromatic Bonus Feature': '#E91E63', # Pink
+    'PRISM Aromatic Bonus DBSCAN': '#E74C3C',  # Red
+}
+
 
 def analyse_molecule(mol) -> dict:
     """
@@ -151,13 +163,9 @@ def plot_property_violins(
     else:
         axes = axes.flatten()
     
-    # Refined color palette - consistent with other analyses
-    colors = {
-        'Reference': '#37474F',  # Blue-grey (sophisticated dark)
-        'DiffSBDD': '#5C6BC0',   # Indigo
-        'PRISM': '#26A69A'       # Teal
-    }
-    fallback_colors = ['#7E57C2', '#EF5350', '#FFA726', '#66BB6A']
+    # Use consistent color palette
+    colors = METHOD_COLORS.copy()
+    fallback_colors = ['#7E57C2', '#EF5350', '#FFA726', '#66BB6A', '#AB47BC', '#29B6F6']
     method_sources = [s for s in sources if s != 'Reference']
     for i, method in enumerate(method_sources):
         if method not in colors:

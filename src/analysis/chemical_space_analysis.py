@@ -260,7 +260,7 @@ def plot_chemical_space(
         'PRISM PoseBusters': {'color': '#2E86AB', 'alpha': 0.5, 'size': 20, 'marker': 'o', 'zorder': 3},
         'PRISM 80-20 HBond Aromatic': {'color': '#9B59B6', 'alpha': 0.5, 'size': 20, 'marker': 's', 'zorder': 4},
         'PRISM 50-50 HBond Aromatic': {'color': '#F39C12', 'alpha': 0.5, 'size': 20, 'marker': '^', 'zorder': 5},
-        'PRISM Aromatic Bonus Feature': {'color': '#1ABC9C', 'alpha': 0.5, 'size': 20, 'marker': 'D', 'zorder': 6},
+        'PRISM Aromatic Bonus Feature': {'color': '#E91E63', 'alpha': 0.5, 'size': 20, 'marker': 'D', 'zorder': 6},
         'PRISM Aromatic Bonus DBSCAN': {'color': '#E74C3C', 'alpha': 0.5, 'size': 20, 'marker': 'v', 'zorder': 7},
         'Reference': {'color': '#2ECC71', 'alpha': 0.9, 'size': 60, 'marker': '*', 'zorder': 10},
     }
